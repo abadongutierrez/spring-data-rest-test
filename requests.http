@@ -1,0 +1,63 @@
+
+GET http://localhost:8080/api
+
+###
+
+http://localhost:8080/api/profile/roles
+
+###
+
+GET http://localhost:8080/api/users
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+"username": "user2",
+"password": "123456"
+}
+
+###
+
+GET http://localhost:8080/api/users/1
+
+
+###
+
+POST http://localhost:8080/api/roles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "admin"
+}
+
+###
+
+GET http://localhost:8080/api/roles/1
+
+###
+
+GET http://localhost:8080/api/roles?name=admin
+
+###
+
+GET http://localhost:8080/api/roles/search/findByNameLike?name=%25adm%25
+
+###
+
+http://localhost:8080/api/profile/roles
+
+###
+
+POST http://localhost:8080/api/userRoles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": 1,
+  "roleId": 1
+}
